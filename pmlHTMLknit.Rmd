@@ -93,6 +93,13 @@ modFit2 <- rpart(classe ~ ., data=cleanpmlTraining, method="class")
 print(modFit2)
 fancyRpartPlot(modFit2, digits=2)
 ```
+
+Predicting test data set
+
+result <-predict(rffit,cleanpmltesting[ , -length(names(cleanpmltesting))])
+
+
+
 The accuracy achieved with rpart plot was less due to overplotting.The random forest method is the best fit model.
 
 
